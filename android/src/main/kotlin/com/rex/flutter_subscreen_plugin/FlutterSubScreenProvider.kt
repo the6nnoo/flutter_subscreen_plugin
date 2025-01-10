@@ -148,7 +148,7 @@ class FlutterSubScreenProvider private constructor() {
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     fun showSubDisplay() {
         //先把之前的隐藏
-        if (currentActivity?.isShowing) return;
+        if (presentation?.isShowing) return;
         closeSubDisplay()
         currentActivity?.let {
             if (!it.isFinishing) {
